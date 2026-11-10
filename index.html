@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5f2" />
+  <title>CampusCart — Student Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="CampusCart home"><span class="brand-mark">C</span><span>campus<span class="brand-accent">cart</span></span></a>
+    <div class="campus-pill"><span class="online-dot"></span><span>Marketplace for</span><strong>Northbridge University</strong><span class="chevron">⌄</span></div>
+    <nav class="top-actions"><button class="icon-button" aria-label="Messages" id="messagesTop">♧<i class="notification-dot"></i></button><button class="avatar avatar-small" aria-label="Your profile">A</button></nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="spark">✦</span> THE CAMPUS MARKETPLACE</div><h1>Good stuff.<br /><em>Better prices.</em></h1><p>Buy and sell the things that make student life a little easier.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#listings">Explore listings <span>↗</span></a><button class="button button-light" id="sellHero"><span class="plus">＋</span> Sell an item</button></div>
+        <div class="trust-row"><div class="avatar-stack"><span class="face face-one">J</span><span class="face face-two">M</span><span class="face face-three">S</span><span class="face face-four">K</span></div><span><strong>2,400+</strong> students buying and selling</span><span class="trust-divider"></span><span class="verified-mini">✓</span><span>Campus verified</span></div>
+      </div>
+      <div class="hero-art"><div class="hero-shape shape-back"></div><div class="hero-shape shape-front"></div><div class="floating-card book-card"><div class="book-art"><span>THE<br/>CREATIVE<br/>ACT</span><small>RICK RUBIN</small></div><div class="book-info"><div><strong>The Creative Act</strong><small>Books · Like new</small></div><b>$12</b></div></div><div class="floating-card tag-card"><span class="tag-icon">✦</span><div><strong>Find your next<br/>favorite thing.</strong><small>Right here on campus.</small></div></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="sparkle sparkle-a">✳</span><span class="sparkle sparkle-b">✦</span><div class="campus-stamp">MADE FOR<br/><strong>CAMPUS</strong><br/>LIFE</div></div>
+    </section>
+
+    <section class="stats-strip"><div><span class="stat-icon lavender">↗</span><span><strong>1,284</strong><small>items listed</small></span></div><div><span class="stat-icon peach">♡</span><span><strong>$48</strong><small>average saved per sale</small></span></div><div><span class="stat-icon mint">✓</span><span><strong>100%</strong><small>student community</small></span></div><div class="stats-note">Your campus. Your marketplace. <span>♥</span></div></section>
+
+    <section class="market" id="listings"><div class="section-heading"><div><div class="eyebrow">THE GOOD FINDS</div><h2>Fresh on campus<span class="period">.</span></h2><p>Great finds, just around the corner.</p></div><a class="text-link" href="#allListings">View all listings <span>→</span></a></div>
+      <div class="market-controls"><div class="category-list" role="tablist" aria-label="Filter by category"><button class="category active" data-category="All">All items <span>48</span></button><button class="category" data-category="Books">Books</button><button class="category" data-category="Tech">Tech</button><button class="category" data-category="Dorm">Dorm & living</button><button class="category" data-category="Style">Style</button><button class="category" data-category="Other">Other</button></div><div class="control-right"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search listings..." /><kbd>⌘ K</kbd></label><button class="filter-button" id="filterButton">☷ <span>Filters</span></button><select id="sortSelect" aria-label="Sort listings"><option value="recent">Recently listed</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div></div>
+      <div class="filter-panel hidden" id="filterPanel"><span>Price range</span><label>$<input id="minPrice" type="number" min="0" placeholder="0" /></label><span>to</span><label>$<input id="maxPrice" type="number" min="0" placeholder="Any" /></label><label class="check-label"><input id="verifiedOnly" type="checkbox" /> Verified sellers only</label><button class="clear-filter" id="clearFilters">Clear</button></div>
+      <div class="listing-grid" id="listingGrid"></div><div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No listings found</h3><p>Try another search or clear your filters.</p><button class="button button-dark" id="resetSearch">Clear filters</button></div><button class="load-more" id="loadMore">Load more finds <span>↓</span></button>
+    </section>
+
+    <section class="cta-banner"><div class="cta-doodle">✳</div><div><div class="eyebrow">GOT SOMETHING TO PASS ON?</div><h2>Make someone’s<br/><em>campus day.</em></h2><p>That textbook you’re done with? The lamp you don’t need? Someone on campus is looking for it.</p><button class="button button-dark" id="sellCta">List an item for free <span>↗</span></button></div><div class="cta-illustration"><div class="plant-pot">▰</div><div class="plant">⌁<br/>╱╲</div><div class="tiny-book book-one">NOTES</div><div class="tiny-book book-two">IDEAS</div><div class="sticker">ONE<br/>PERSON’S<br/><strong>GOLD</strong></div></div></section>
+    <footer><a class="brand" href="#home"><span class="brand-mark">C</span><span>campus<span class="brand-accent">cart</span></span></a><span>Made for student life, by student life.</span><span>© 2025 CampusCart</span></footer>
+  </main>
+
+  <dialog id="listingDialog" class="modal"><form method="dialog" class="modal-head"><div><div class="eyebrow">SOMETHING TO SELL?</div><h2>List an item</h2></div><button class="close-button" aria-label="Close">×</button></form><form id="listingForm" class="listing-form"><label>Item name<input name="title" required maxlength="60" placeholder="e.g. Intro to Psychology textbook" /></label><div class="form-row"><label>Price ($)<input name="price" type="number" required min="1" max="9999" placeholder="25" /></label><label>Category<select name="category"><option>Books</option><option>Tech</option><option>Dorm</option><option>Style</option><option>Other</option></select></label></div><label>Description<textarea name="description" rows="3" maxlength="180" placeholder="Tell buyers a little about it..."></textarea></label><label>Photo URL <span class="optional">(optional)</span><input name="image" type="url" placeholder="https://..." /></label><button class="button button-dark submit-listing" type="submit">Post listing <span>↗</span></button><p class="form-note"><span>✓</span> Only verified campus students can list items.</p></form></dialog>
+  <dialog id="messageDialog" class="modal message-modal"><form method="dialog" class="modal-head"><div><div class="eyebrow">CAMPUS CHAT</div><h2 id="messageTitle">Message seller</h2></div><button class="close-button" aria-label="Close">×</button></form><div class="chat-history" id="chatHistory"><div class="chat-note">Keep it friendly. Meet somewhere public on campus.</div></div><form id="messageForm" class="message-form"><input id="messageInput" placeholder="Write a message..." maxlength="250" required /><button class="button button-dark" aria-label="Send message">↑</button></form></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

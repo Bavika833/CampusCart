@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: campuscart
+    runtime: static
+    buildCommand: echo "Publishing static CampusCart site"
+    staticPublishPath: .
